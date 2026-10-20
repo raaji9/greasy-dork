@@ -6,7 +6,8 @@ Personal collection of user scripts.
 
 | Script | Description |
 |--------|-------------|
-| [URL Redirector](https://greasyfork.org/en/scripts/601198-url-redirector) | Redirects social media sites to no-login frontends |
+| [URL Redirector](#url-redirector) | Redirects social media sites to no-login frontends |
+| [Force Dark Mode](#force-dark-mode) | Forces dark mode on all sites via matchMedia + localStorage override |
 | *(more coming)* | |
 
 ---
@@ -47,6 +48,24 @@ Redirects Instagram, Snapchat, and X to no-login-required frontends. Each site c
 - If a mirror changes its URL structure, transforms will need updating
 
 ---
+
+## Force Dark Mode
+
+Forces dark mode on every site by overriding `window.matchMedia` to report `prefers-color-scheme: dark` and pre-setting common `localStorage` theme keys before site scripts run.
+
+### Install
+
+1. Install [Violentmonkey](https://violentmonkey.github.io/)
+2. Install [Force Dark Mode](https://greasyfork.org/en/scripts/XXXXXX-force-dark-mode) from GreasyFork
+
+### Usage
+
+No interaction needed. The script runs automatically on every page at `document-start`, before site scripts execute. Sites that check `prefers-color-scheme` or read common localStorage theme keys will see dark mode.
+
+### Excluding a site
+
+Add an `@exclude` line to the script header for any site where forced dark mode breaks the UI:
+
 <!--
 ## New Script Name
 
