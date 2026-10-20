@@ -11,6 +11,8 @@
 // @grant        GM_registerMenuCommand
 // @grant        GM_getValue
 // @grant        GM_setValue
+// @downloadURL https://github.com/raaji9/greasy-dork/blob/main/url-redirector.user.js
+// @updateURL   https://github.com/raaji9/greasy-dork/blob/main/url-redirector.user.js
 // ==/UserScript==
 
 // Redirects social media URLs to no-login mirrors.
