@@ -1,18 +1,23 @@
 // ==UserScript==
 // @name         URL Redirector
 // @namespace    https://github.com/raaji9/greasy-dork
-// @icon         data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236c5ce7' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><path d='M4 9a8 8 0 0 1 14-3l2 2'/><path d='M20 3v5h-5'/><path d='M20 15a8 8 0 0 1-14 3l-2-2'/><path d='M4 21v-5h5'/></svg>
 // @version      1.0
 // @description  Redirects Instagram, Snapchat, and X to no-login frontends (Imginn, ViewSnapStories, TwitterViewer). Toggle each site from the Violentmonkey menu.
+// @author       raaji9
 // @homepage     https://github.com/raaji9/greasy-dork
+// @icon         data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236c5ce7' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><path d='M4 9a8 8 0 0 1 14-3l2 2'/><path d='M20 3v5h-5'/><path d='M20 15a8 8 0 0 1-14 3l-2-2'/><path d='M4 21v-5h5'/></svg>
 // @license      MIT
-// @match        *://*/*
+// @match        *://*.instagram.com/*
+// @match        *://*.snapchat.com/*
+// @match        *://*.x.com/*
+// @match        *://*.twitter.com/*
 // @run-at       document-start
+// @noframes
 // @grant        GM_registerMenuCommand
 // @grant        GM_getValue
 // @grant        GM_setValue
-// @downloadURL https://github.com/raaji9/greasy-dork/blob/main/url-redirector.user.js
-// @updateURL   https://github.com/raaji9/greasy-dork/blob/main/url-redirector.user.js
+// @downloadURL  https://raw.githubusercontent.com/raaji9/greasy-dork/main/url-redirector.user.js
+// @updateURL    https://raw.githubusercontent.com/raaji9/greasy-dork/main/url-redirector.user.js
 // ==/UserScript==
 
 // Redirects social media URLs to no-login mirrors.
