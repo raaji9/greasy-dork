@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         URL Redirector
 // @namespace    https://github.com/raaji9/greasy-dork
-// @version      1.0
+// @version      1.0.1
 // @description  Redirects Instagram, Snapchat, and X to no-login frontends (Imginn, ViewSnapStories, TwitterViewer). Toggle each site from the Violentmonkey menu.
 // @author       raaji9
 // @homepage     https://github.com/raaji9/greasy-dork
