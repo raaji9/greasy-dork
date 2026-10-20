@@ -6,7 +6,7 @@ Personal collection of user scripts.
 
 | Script | Description |
 |--------|-------------|
-| [URL Redirector](#url-redirector) | Redirects social media sites to no-login frontends |
+| [URL Redirector](https://greasyfork.org/en/scripts/601198-url-redirector) | Redirects social media sites to no-login frontends |
 | *(more coming)* | |
 
 ---
@@ -31,7 +31,7 @@ Redirects Instagram, Snapchat, and X to no-login-required frontends. Each site c
 ### Install
 
 1. Install [Violentmonkey](https://violentmonkey.github.io/)
-2. Install [URL Redirector](https://greasyfork.org/en/scripts/601173-url-redirector) from GreasyFork
+2. Install [URL Redirector](https://greasyfork.org/en/scripts/601198-url-redirector) from GreasyFork
 3. Click the Violentmonkey icon in your browser toolbar to toggle individual sites on/off
 
 ### Adding a new redirect
