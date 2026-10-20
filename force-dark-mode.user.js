@@ -2,14 +2,17 @@
 // @name         Force Dark Mode
 // @namespace    https://github.com/raaji9/greasy-dork
 // @version      1.0.0
-// @license      MIT
 // @description  Forces dark mode on all sites by overriding matchMedia and common localStorage theme keys.
+// @author       raaji9
 // @homepage     https://github.com/raaji9/greasy-dork
-// @downloadURL  https://raw.githubusercontent.com/raaji9/greasy-dork/main/force-dark-mode.user.js
-// @updateURL    https://raw.githubusercontent.com/raaji9/greasy-dork/main/force-dark-mode.user.js
+// @icon         data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23f1c40f'><path d='M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z'/></svg>
+// @license      MIT
 // @match        *://*/*
 // @run-at       document-start
+// @noframes
 // @grant        none
+// @downloadURL  https://raw.githubusercontent.com/raaji9/greasy-dork/main/force-dark-mode.user.js
+// @updateURL    https://raw.githubusercontent.com/raaji9/greasy-dork/main/force-dark-mode.user.js
 // ==/UserScript==
 
 (function() {
