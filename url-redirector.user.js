@@ -11,6 +11,9 @@
 // @match        *://*.snapchat.com/*
 // @match        *://*.x.com/*
 // @match        *://*.twitter.com/*
+// @match        *://*.imginn.com/*
+// @match        *://*.viewsnapstories.com/*
+// @match        *://*.twitterviewer.net/*
 // @run-at       document-start
 // @noframes
 // @grant        GM_registerMenuCommand
@@ -48,9 +51,9 @@ for (const [host, rule] of Object.entries(redirects)) {
   const isOn = GM_getValue(key, 'on') !== 'off';
 
   GM_registerMenuCommand(
-    `${rule.label} [${isOn ? 'ON' : 'OFF'}]`,
+    `${rule.label} ${isOn ? '✅' : '⬜'}`,
     () => {
-      GM_setValue(key, GM_getValue(key, 'on') === 'off' ? 'on' : 'off');
+      GM_setValue(key, isOn ? 'off' : 'on');
       location.reload();
     },
     { id: `toggle_${host}`, icon: icons[host] }
@@ -75,12 +78,6 @@ for (const [host, rule] of Object.entries(redirects)) {
     if (next) path = new URL(next, location.origin).pathname;
   }
 
-  // twitterviewer: /i/jf/onboarding/web?redirect_after_login=/username/
-  if (host === 'twitterviewer.net' && path.includes('/onboarding/')) {
-    const after = new URLSearchParams(location.search).get('redirect_after_login');
-    if (after) path = after;
-  }
-
   // transforms: rewrite the path to match the target's URL structure
 
   // instagram: imginn puts /tagged before the username
@@ -101,4 +98,4 @@ for (const [host, rule] of Object.entries(redirects)) {
   }
 
   location.replace(`https://${rule.target}${path}`);
-})();   
+})();
