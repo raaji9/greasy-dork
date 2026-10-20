@@ -56,7 +56,7 @@ Forces dark mode on every site by overriding `window.matchMedia` to report `pref
 ### Install
 
 1. Install [Violentmonkey](https://violentmonkey.github.io/)
-2. Install [Force Dark Mode](https://greasyfork.org/en/scripts/XXXXXX-force-dark-mode) from GreasyFork
+2. Install [Force Dark Mode](https://greasyfork.org/en/scripts/601254-force-dark-mode) from GreasyFork
 
 ### Usage
 
