@@ -76,15 +76,15 @@ Applies dark mode to every website using pure CSS color inversion (`invert()` + 
 The script runs automatically on every page before site scripts execute.
 
 **Menu commands** (access via Violentmonkey icon):
-- **☀️ / 🌙 Toggle dark mode** - Enable or disable dark mode for the current site. Icon changes based on state.
-- **📋 View excluded** - Display all sites where dark mode is currently disabled.
-- **🗑️ Clear all** - Remove all exclusions (with confirmation).
+- **Toggle dark mode** - Enable or disable dark mode for the current site. Icon changes based on state.
+- **View excluded** - Display all sites where dark mode is currently disabled.
+- **Clear all** - Remove all exclusions (with confirmation).
 
 ### Excluding a site
 
-Click the Violentmonkey icon → **☀️ Toggle dark mode** to add the current site to the exclusion list. The page reloads instantly. The menu option changes to **🌙** to indicate dark mode is off.
+Click the Violentmonkey icon → **Toggle dark mode** to add the current site to the exclusion list. The page reloads instantly. The menu option changes to **🌙** to indicate dark mode is off.
 
-To re-enable dark mode later, click **🌙 Toggle dark mode** again.
+To re-enable dark mode later, click **Toggle dark mode** again.
 
 ### Performance
 
