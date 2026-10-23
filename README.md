@@ -1,13 +1,13 @@
 # greasy-dork
 
-Personal collection of user scripts.
+Personal collection of user scripts for enhanced browsing.
 
 ## Scripts
 
 | Script | Description |
 |--------|-------------|
 | [URL Redirector](#url-redirector) | Redirects social media sites to no-login frontends |
-| [Force Dark Mode](#force-dark-mode) | Forces dark mode on all sites via matchMedia + localStorage override |
+| [Pure Dark Mode](#pure-dark-mode) | Forces dark mode via CSS color inversion with per-site exclusion |
 | *(more coming)* | |
 
 ---
@@ -49,22 +49,57 @@ Redirects Instagram, Snapchat, and X to no-login-required frontends. Each site c
 
 ---
 
-## Force Dark Mode
+## Pure Dark Mode
 
-Forces dark mode on every site by overriding `window.matchMedia` to report `prefers-color-scheme: dark` and pre-setting common `localStorage` theme keys before site scripts run.
+Applies dark mode to every website using pure CSS color inversion (`invert()` + `hue-rotate()`). Automatically inverts media (images, videos, etc.) back to preserve their original appearance. Allows per-site exclusion management via Violentmonkey menu.
+
+### How it works
+
+**Color Inversion Strategy:**
+- `invert(1)` flips all colors: white ↔ black, blue ↔ yellow, etc.
+- `hue-rotate(180deg)` restores natural color appearance after inversion
+- Media elements are inverted twice, canceling out the effect and preserving their original look
+- Uses CSS filters only-no JavaScript DOM manipulation, minimal performance impact
+
+**Exclusion System:**
+- Maintains a per-domain exclusion list stored locally
+- Toggle dark mode on/off for individual sites via Violentmonkey menu
+- Changes take effect immediately on page reload
 
 ### Install
 
 1. Install [Violentmonkey](https://violentmonkey.github.io/)
-2. Install [Force Dark Mode](https://greasyfork.org/en/scripts/601254-force-dark-mode) from GreasyFork
+2. Install [Pure Dark Mode](https://greasyfork.org/en/scripts/601730-pure-dark-mode) from GreasyFork
 
 ### Usage
 
-No interaction needed. The script runs automatically on every page at `document-start`, before site scripts execute. Sites that check `prefers-color-scheme` or read common localStorage theme keys will see dark mode.
+The script runs automatically on every page before site scripts execute.
+
+**Menu commands** (access via Violentmonkey icon):
+- **☀️ / 🌙 Toggle dark mode** - Enable or disable dark mode for the current site. Icon changes based on state.
+- **📋 View excluded** - Display all sites where dark mode is currently disabled.
+- **🗑️ Clear all** - Remove all exclusions (with confirmation).
 
 ### Excluding a site
 
-Add an `@exclude` line to the script header for any site where forced dark mode breaks the UI:
+Click the Violentmonkey icon → **☀️ Toggle dark mode** to add the current site to the exclusion list. The page reloads instantly. The menu option changes to **🌙** to indicate dark mode is off.
+
+To re-enable dark mode later, click **🌙 Toggle dark mode** again.
+
+### Performance
+
+- Pure CSS-based filtering-zero JavaScript overhead after initial setup
+- Single stylesheet injection
+- No DOM traversal or manipulation
+- Works on all modern browsers supporting CSS `filter` property
+
+### Known limitations
+
+- Some sites with complex custom styling may render incorrectly (use exclusion list for these)
+- SVG icons may invert unexpectedly; use `data-icon` attribute to prevent inversion
+- Animated backgrounds/videos will be inverted (this is intentional to preserve original appearance)
+
+---
 
 <!--
 ## New Script Name
