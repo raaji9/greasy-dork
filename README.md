@@ -82,7 +82,7 @@ The script runs automatically on every page before site scripts execute.
 
 ### Excluding a site
 
-Click the Violentmonkey icon → **Toggle dark mode** to add the current site to the exclusion list. The page reloads instantly. The menu option changes to **🌙** to indicate dark mode is off.
+Click the Violentmonkey icon → **Toggle dark mode** to add the current site to the exclusion list. The page reloads instantly. The menu option changes icon to indicate dark mode is off.
 
 To re-enable dark mode later, click **Toggle dark mode** again.
 
